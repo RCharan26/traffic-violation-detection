@@ -75,14 +75,7 @@ class Settings(BaseSettings):
     PREPROCESSING_DETECT_CONDITIONS: bool = True
 
     # ── CORS ───────────────────────────────────────────────────
-    CORS_ORIGINS: List[str] = [
-    "http://localhost:3000",
-    "http://localhost:5173",
-    "http://127.0.0.1:3000",
-    "http://localhost:80",
-    "http://localhost",
-    "https://trafficvision-frontend.vercel.app",
-]
+    CORS_ORIGINS: List[str] = ["*"]
 
     model_config = {
         "env_file": str(_PROJECT_ROOT / ".env"),
