@@ -1,0 +1,46 @@
+# ============================================================
+# TrafficVision AI — Root Requirements (Training + Inference)
+# ============================================================
+# Install with: pip install -r requirements.txt
+
+# ── Core ML / Training ────────────────────────────────────────
+torch>=2.1.0
+torchvision>=0.16.0
+ultralytics>=8.3.40          # YOLOv11 training + inference
+
+# ── Computer Vision ───────────────────────────────────────────
+opencv-python>=4.10.0.84     # Full OpenCV (training scripts need dnn_superres)
+numpy>=1.26.0
+pillow>=11.0.0
+
+# ── Data Augmentation ─────────────────────────────────────────
+albumentations>=1.4.0        # Offline augmentation pipeline
+
+# ── OCR ───────────────────────────────────────────────────────
+easyocr>=1.7.2               # EasyOCR (primary + fallback)
+paddlepaddle>=2.6.0          # PaddlePaddle CPU backend for PaddleOCR
+paddleocr>=2.8.0             # PaddleOCR primary engine
+
+# ── Object Tracking ───────────────────────────────────────────
+supervision>=0.22.0          # ByteTrack via supervision library
+
+# ── Data Processing ───────────────────────────────────────────
+pandas>=2.2.3
+scipy>=1.12.0                # Used in evaluation metrics
+
+# ── Model Export ──────────────────────────────────────────────
+onnx>=1.16.0                 # ONNX export
+onnxruntime>=1.18.0          # ONNX inference validation (CPU)
+# onnxruntime-gpu             # Uncomment if GPU available
+
+# ── Profiling / Benchmarking ──────────────────────────────────
+psutil>=5.9.0                # CPU / memory profiling
+
+# ── HTTP / API ────────────────────────────────────────────────
+httpx>=0.28.0
+requests>=2.31.0
+
+# ── Utilities ─────────────────────────────────────────────────
+python-dotenv>=1.0.1
+tqdm>=4.66.0
+coloredlogs>=15.0.1
