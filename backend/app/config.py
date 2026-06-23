@@ -66,7 +66,7 @@ class Settings(BaseSettings):
     # ── OCR Configuration ──────────────────────────────────────
     # Primary engine: "paddleocr" (with EasyOCR fallback)
     # Set to "easyocr" to skip PaddleOCR and use EasyOCR directly.
-    OCR_PRIMARY_ENGINE: str = "paddleocr"
+    OCR_PRIMARY_ENGINE: str = "easyocr"
     OCR_LANGUAGES: List[str] = ["en"]
 
     # ── Image Preprocessing ────────────────────────────────────
